@@ -28,6 +28,14 @@ public class Player : MonoBehaviour
           {
              x=0;
           }
+        if (transform.position.x > 3.4f)
+        {
+            transform.position=new Vector3(-3.3f,3.5f,0);
+        }
+        if (transform.position.x < -3.4f)
+        {
+            transform.position = new Vector3(3.3f, 3.5f, 0);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 8646543878240670509}
   - component: {fileID: 201831978516365027}
   m_Layer: 0
-  m_Name: Fruits4
-  m_TagString: Fruits4
+  m_Name: Fruits1
+  m_TagString: Fruits1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -55,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5a58f7b950d380b45838a94005d85764, type: 2}
+  - {fileID: 2100000, guid: 19a650c3e4949b84abc68e120ff0dc6c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -158,8 +158,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8132869984699380600}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3b67562b9c301249ab0ea6731262054, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a362e4c6f967e246af7c09d67434480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCollision: 0
-  point: 8
+  set: 0
+  fall: 0
+  Player: {fileID: 0}
