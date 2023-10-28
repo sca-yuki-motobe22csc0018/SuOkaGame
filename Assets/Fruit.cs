@@ -9,27 +9,27 @@ public class Fruit : MonoBehaviour
     private float y=0;
     [SerializeField]public GameObject Player;
     private Rigidbody2D rb;
+    public Collider2D coll;
     // Start is called before the first frame update
     void Start()
     {
-        y=0;
         Player= GameObject.Find("Player");
         set=false;
         fall=false;
+        rb = GetComponent<Rigidbody2D>();
+        coll= GetComponent<Collider2D>();
+        rb.gravityScale=0;
+        coll.isTrigger=true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Physics2D.gravity = new Vector2(0, 10);
         if (set == true&&fall==false)
         {
             this.transform.position = Player.transform.position;
-        }else
-         if (fall==true)
-         {
-            y=9.8f;
-         }
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (set == false)
@@ -39,6 +39,8 @@ public class Fruit : MonoBehaviour
             else
             {
                 fall=true;
+                rb.gravityScale = 1;
+                coll.isTrigger =false;
             }
         }
     }
