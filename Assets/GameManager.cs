@@ -5,9 +5,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
+    public static bool gattai;
+    AudioSource[]a;
     void Start()
     {
-        
+        gattai=false;
     }
 
     // Update is called once per frame

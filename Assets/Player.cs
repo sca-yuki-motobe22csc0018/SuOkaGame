@@ -28,13 +28,13 @@ public class Player : MonoBehaviour
           {
              x=0;
           }
-        if (transform.position.x > 3.4f)
+        if (transform.position.x > 3.7f)
         {
-            transform.position=new Vector3(-3.3f,3.5f,0);
+            transform.position=new Vector3(-3.6f,3.5f,0);
         }
-        if (transform.position.x < -3.4f)
+        if (transform.position.x < -3.7f)
         {
-            transform.position = new Vector3(3.3f, 3.5f, 0);
+            transform.position = new Vector3(3.6f, 3.5f, 0);
         }
     }
 
