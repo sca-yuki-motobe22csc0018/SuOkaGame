@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 6269379777526606854}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.024, y: 0.106, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
+  m_LocalPosition: {x: -0.008, y: 0.099, z: 0}
+  m_LocalScale: {x: 1.13, y: 1.13, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7749359615075090781}
@@ -225,6 +225,7 @@ MonoBehaviour:
   coll: {fileID: 0}
   ok: 0
   nextPrefab: {fileID: 8132869984699380600, guid: 3c6528ca81918e84c9c64f3cee7a613b, type: 3}
+  se: {fileID: 8300000, guid: 56974ce0a94c4884b88d81d16d3cb7aa, type: 3}
 --- !u!50 &-991180068500564342
 Rigidbody2D:
   serializedVersion: 4

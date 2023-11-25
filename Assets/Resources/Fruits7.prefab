@@ -225,6 +225,7 @@ MonoBehaviour:
   coll: {fileID: 0}
   ok: 0
   nextPrefab: {fileID: 8132869984699380600, guid: 4ee6e8422b678b24481acb607223e263, type: 3}
+  se: {fileID: 8300000, guid: 56974ce0a94c4884b88d81d16d3cb7aa, type: 3}
 --- !u!50 &4630089818395394837
 Rigidbody2D:
   serializedVersion: 4

@@ -13,7 +13,12 @@ public class Fruit : MonoBehaviour
     public bool ok;
     public GameObject nextPrefab;
     public static int count=0;
+    public static bool end=false;
     int num;
+
+    AudioSource audioSource;
+    [SerializeField]public AudioClip se;
+
     
     // Start is called before the first frame update
     void Start()
@@ -24,6 +29,8 @@ public class Fruit : MonoBehaviour
         coll = GetComponent<Collider2D>();
         rb.gravityScale = 0;
         coll.isTrigger = true;
+        audioSource = GetComponent<AudioSource>();
+        end=false;
         if (transform.position.x != 5)
         {
             set = true;
@@ -50,27 +57,37 @@ public class Fruit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (set == true&&fall==false)
+        if (end == false)
         {
-            this.transform.position = Player.transform.position;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (set == false)
+            if (set == true && fall == false)
             {
-                set=true;
+                this.transform.position = Player.transform.position;
             }
-            else
+
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                fall=true;
-                rb.gravityScale = 1;
-                coll.isTrigger =false;
+
+                if (set == false)
+                {
+                    set = true;
+                }
+                else
+                {
+                    fall = true;
+                    rb.gravityScale = 1;
+                    coll.isTrigger = false;
+                }
+            }
+            if (count == 2)
+            {
+
             }
         }
-        if (count == 2)
-        {
+        
 
+        if (transform.position.y < -10||transform.position.y>6)
+        {
+            end=true;
         }
     }
 
@@ -88,6 +105,7 @@ public class Fruit : MonoBehaviour
                 }
                 GameObject Fruits = Instantiate(nextPrefab, hitPos, Quaternion.identity);
                 GameManager.gattai=true;
+                
                 Destroy(this.gameObject);
             }
         }
